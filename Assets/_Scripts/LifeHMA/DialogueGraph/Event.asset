@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75ff2b3aa2ee544389a1cd8f6298339, type: 3}
+  m_Name: Event
+  m_EditorClassIdentifier: Assembly-CSharp::LifeHMA.Dialogue.DialogueEventSO
+  Id: 99348647-17fd-459b-b6a9-c74d546cb8de

@@ -1,0 +1,1369 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9018715985264494063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &-8956991576402758471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items:
+    - Key: c3c4df1478ecee047af14b9345ebc2e8
+      Value: 0
+  boolFields:
+    items: []
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &-8652337227539310122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: -5559291710225327987}
+  tree: {fileID: 11400000}
+  node: {fileID: 7291587138301052077}
+--- !u!114 &-7952328678847855596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e31b4410c3712e4a9aa21372a79ac52, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.DialogueNodeInternal
+  guid: 3bdd771447b7e9e439b5feeee044c1a9
+  position: {x: 760.76385, y: 682.00006}
+  tree: {fileID: 11400000}
+  customFieldSO: {fileID: 1948596536511173799}
+  nodeID: a4a787a5-54a4-4fb1-94c4-8f78c4ab7b1e
+  speaker: {fileID: 6510823628715299241}
+  messages:
+    items:
+    - Key: 0
+      Value: OPTION 1
+  listeners:
+  - {fileID: -5159359836002055057}
+  child: {fileID: -2710855058620395703}
+--- !u!114 &-7433794797694254271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e31b4410c3712e4a9aa21372a79ac52, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.DialogueNodeInternal
+  guid: bc21186a80d19924195d0b1e2fc21be4
+  position: {x: 265.7639, y: 674}
+  tree: {fileID: 11400000}
+  customFieldSO: {fileID: -2095002880277480273}
+  nodeID: c4c62a9b-0710-4403-b597-a6209693d21b
+  speaker: {fileID: 3959662249662078408}
+  messages:
+    items:
+    - Key: 0
+      Value: Hola
+  listeners: []
+  child: {fileID: -7952328678847855596}
+--- !u!114 &-7334267633738889705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: c5d6a17d0fb4c434282db544d2f3fede
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &-6918490609185191003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: 7291429571828705071}
+  tree: {fileID: 11400000}
+  node: {fileID: -2710855058620395703}
+--- !u!114 &-6796335625719558895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 1
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &-6095793207269808647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 1
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items: []
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &-5976866662590665085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 1
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &-5756728865649450941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e31b4410c3712e4a9aa21372a79ac52, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.DialogueNodeInternal
+  guid: 0f2ddd010fcd5d440bc1f637f732eb18
+  position: {x: 2739, y: 856}
+  tree: {fileID: 11400000}
+  customFieldSO: {fileID: 953373109348704823}
+  nodeID: f91ebf94-e076-4b58-9bd0-07ef46df5633
+  speaker: {fileID: 642360769223912536}
+  messages:
+    items:
+    - Key: 0
+      Value: BBB
+  listeners:
+  - {fileID: 346391085844463362}
+  child: {fileID: 2281678204944479653}
+--- !u!114 &-5559291710225327987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &-5159359836002055057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: 5240007024278581610}
+  tree: {fileID: 11400000}
+  node: {fileID: -7952328678847855596}
+--- !u!114 &-4546303969946116987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: -6796335625719558895}
+  tree: {fileID: 11400000}
+  node: {fileID: 2121835221076833273}
+--- !u!114 &-4143617729422778778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 2
+  dialogueCharacterPositionValue: 1
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &-3377415135228586100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 1
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &-2710855058620395703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e31b4410c3712e4a9aa21372a79ac52, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.DialogueNodeInternal
+  guid: acc7f386291e9de4a8be43b2c2666f5c
+  position: {x: 1228.7638, y: 690}
+  tree: {fileID: 11400000}
+  customFieldSO: {fileID: -8956991576402758471}
+  nodeID: 2ca1eb7b-248e-44a1-9508-41576b55eaf7
+  speaker: {fileID: -6918490609185191003}
+  messages:
+    items:
+    - Key: 0
+      Value: OPTION 2 OPTION 2OPTION 2OPTION 2OPTION 2OPTION 2OPTION 2OPTION 2OPTION
+        2OPTION 2OPTION 2OPTION 2OPTION 2OPTION 2OPTION 2OPTION 2OPTION 2OPTION 2
+  listeners:
+  - {fileID: 93080569447029822}
+  child: {fileID: 2121835221076833273}
+--- !u!114 &-2326036712691953139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items:
+    - Key: c3c4df1478ecee047af14b9345ebc2e8
+      Value: 0
+  boolFields:
+    items:
+    - Key: c5d6a17d0fb4c434282db544d2f3fede
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &-2095002880277480273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items:
+    - Key: c3c4df1478ecee047af14b9345ebc2e8
+      Value: 0.25
+  boolFields:
+    items:
+    - Key: c5d6a17d0fb4c434282db544d2f3fede
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &-1111204036737679707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: -6095793207269808647}
+  tree: {fileID: 11400000}
+  node: {fileID: 7291587138301052077}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251c12e3471aae3468873f85cc1d8d9c, type: 3}
+  m_Name: TestDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.DialogueTreeSO
+  dialogueID: f0ce5ae83b1690e469571eec737afc09
+  startNode: {fileID: 6312037729053861062}
+  nodes:
+  - {fileID: 6312037729053861062}
+  - {fileID: -7433794797694254271}
+  - {fileID: -7952328678847855596}
+  - {fileID: 2281678204944479653}
+  - {fileID: -2710855058620395703}
+  - {fileID: 7291587138301052077}
+  - {fileID: 2121835221076833273}
+  - {fileID: 3366656825013765826}
+  - {fileID: -5756728865649450941}
+--- !u!114 &58533904426620190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: 8809699660172843826}
+  tree: {fileID: 11400000}
+  node: {fileID: 3366656825013765826}
+--- !u!114 &93080569447029822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: 2688009898710928033}
+  tree: {fileID: 11400000}
+  node: {fileID: -2710855058620395703}
+--- !u!114 &346391085844463362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: 6468789065774113167}
+  tree: {fileID: 11400000}
+  node: {fileID: -5756728865649450941}
+--- !u!114 &642360769223912536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: -5976866662590665085}
+  tree: {fileID: 11400000}
+  node: {fileID: -5756728865649450941}
+--- !u!114 &693384497800136926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items: []
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &953373109348704823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 1
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items:
+    - Key: c3c4df1478ecee047af14b9345ebc2e8
+      Value: 0.25
+  boolFields:
+    items:
+    - Key: c5d6a17d0fb4c434282db544d2f3fede
+      Value: 0
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &1685971603845477504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items: []
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &1948596536511173799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 1
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items:
+    - Key: c3c4df1478ecee047af14b9345ebc2e8
+      Value: 0.25
+  boolFields:
+    items: []
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &2121835221076833273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e31b4410c3712e4a9aa21372a79ac52, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.DialogueNodeInternal
+  guid: f162cbb3921cf6f4399f8ee304ead9d2
+  position: {x: 1707.0079, y: 689.9998}
+  tree: {fileID: 11400000}
+  customFieldSO: {fileID: 1685971603845477504}
+  nodeID: 0b1f5aa6-88d2-47d6-9bbc-624ae811755c
+  speaker: {fileID: 8313089199951825528}
+  messages:
+    items:
+    - Key: 0
+      Value: asdasd
+  listeners:
+  - {fileID: -4546303969946116987}
+  child: {fileID: 7291587138301052077}
+--- !u!114 &2281678204944479653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5203a8d111a414fa4bd699c4c56ae1, type: 3}
+  m_Name: End Node
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.EndNodeInternal
+  guid: 230a88d565a2f424694851444827dbf2
+  position: {x: 3367.48, y: 563}
+  tree: {fileID: 11400000}
+  customFieldSO: {fileID: 2743355702148772927}
+  nodeID: 8605edfa-37c9-4749-8520-32a0674863f1
+  nextDialogue: {fileID: 0}
+--- !u!114 &2408322376822059401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items: []
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &2688009898710928033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 1
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &2743355702148772927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items: []
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &3366656825013765826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e31b4410c3712e4a9aa21372a79ac52, type: 3}
+  m_Name: Dialogue Node
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.DialogueNodeInternal
+  guid: 188dca005bd8474498a55807ffeed7dc
+  position: {x: 2746, y: 486}
+  tree: {fileID: 11400000}
+  customFieldSO: {fileID: -7334267633738889705}
+  nodeID: 5eef17fd-acc3-4e03-adeb-1137078052e5
+  speaker: {fileID: 58533904426620190}
+  messages:
+    items:
+    - Key: 0
+      Value: AAA
+  listeners:
+  - {fileID: 8322220474935684964}
+  child: {fileID: 2281678204944479653}
+--- !u!114 &3959662249662078408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: 4873135725626427424}
+  tree: {fileID: 11400000}
+  node: {fileID: -7433794797694254271}
+--- !u!114 &4873135725626427424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &5240007024278581610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &6312037729053861062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579d9ab60cbcc4547b41eeed62b59450, type: 3}
+  m_Name: Start Node
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.StartNodeInternal
+  guid: c398bcf51a6e5cb439e04fcea8d5761b
+  position: {x: 82.76386, y: 684.00006}
+  tree: {fileID: 11400000}
+  customFieldSO: {fileID: 2408322376822059401}
+  nodeID: 95a98222-d9fa-4d82-a9bb-8abc0062f712
+  child: {fileID: -7433794797694254271}
+--- !u!114 &6468789065774113167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &6510823628715299241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: -4143617729422778778}
+  tree: {fileID: 11400000}
+  node: {fileID: -7952328678847855596}
+--- !u!114 &6825258901039881028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items: []
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &6953226156534581508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4814c4f826a204224a023a204bb1224b, type: 3}
+  m_Name: DialogueSystem.ChoiceInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.ChoiceInternal
+  isDefaultChoice: 0
+  messages:
+    items:
+    - Key: 0
+      Value: 2
+  child: {fileID: -5756728865649450941}
+  tree: {fileID: 11400000}
+  customFieldSO: {fileID: 6825258901039881028}
+--- !u!114 &7291429571828705071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []
+--- !u!114 &7291587138301052077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564a568662bb5194aa0a6a05925424a6, type: 3}
+  m_Name: Choice Node
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.ChoiceNodeInternal
+  guid: af663c73ad810be4aa0ef25af00cf766
+  position: {x: 2173, y: 562}
+  tree: {fileID: 11400000}
+  customFieldSO: {fileID: -2326036712691953139}
+  nodeID: 4eb3738a-1cd7-4a21-a712-4b29a89d17ab
+  speaker: {fileID: -8652337227539310122}
+  messages:
+    items:
+    - Key: 0
+      Value: ????
+  listeners:
+  - {fileID: -1111204036737679707}
+  choices:
+  - {fileID: 7968388015268833710}
+  - {fileID: 6953226156534581508}
+--- !u!114 &7968388015268833710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4814c4f826a204224a023a204bb1224b, type: 3}
+  m_Name: DialogueSystem.ChoiceInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.ChoiceInternal
+  isDefaultChoice: 1
+  messages:
+    items:
+    - Key: 0
+      Value: 1
+  child: {fileID: 3366656825013765826}
+  tree: {fileID: 11400000}
+  customFieldSO: {fileID: 693384497800136926}
+--- !u!114 &8313089199951825528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: -9018715985264494063}
+  tree: {fileID: 11400000}
+  node: {fileID: 2121835221076833273}
+--- !u!114 &8322220474935684964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccfefcaa74d6af4c9819570d95910bf, type: 3}
+  m_Name: DialogueSystem.CharacterInternal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CharacterInternal
+  characterName: NewCharacter
+  customFieldSO: {fileID: -3377415135228586100}
+  tree: {fileID: 11400000}
+  node: {fileID: 3366656825013765826}
+--- !u!114 &8809699660172843826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6160f032e709754da478093a781d78f, type: 3}
+  m_Name: DialogueSystem.CustomFieldSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.CustomFieldSO
+  textPositionValue: 0
+  emotionValue: 0
+  dialogueCharacterPositionValue: 0
+  stringFields:
+    items: []
+  intFields:
+    items: []
+  floatFields:
+    items: []
+  boolFields:
+    items:
+    - Key: d214023d311e0db4a91eb29256e5441d
+      Value: 1
+  vector2Fields:
+    items: []
+  vector3Fields:
+    items: []
+  spriteFields:
+    items: []
+  gameObjectFields:
+    items: []
+  audioClipFields:
+    items: []
+  dialogueTreeFields:
+    items: []

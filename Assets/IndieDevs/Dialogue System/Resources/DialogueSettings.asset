@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c060a3bf823f34f9cb03bb1115cfbb, type: 3}
+  m_Name: DialogueSettings
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.DialogueSettings
+  dialogueTree: {fileID: 11400000, guid: f0ce5ae83b1690e469571eec737afc09, type: 2}
+  characters:
+  - NewCharacter
+  characterFields:
+  - {fileID: 11400000, guid: 30f1c85ff71747f46930f5d7cb042868, type: 2}
+  - {fileID: 11400000, guid: 01dbd0d776db5b94abd6d3d50655ee08, type: 2}
+  - {fileID: 11400000, guid: d214023d311e0db4a91eb29256e5441d, type: 2}
+  dialogueEvents:
+  - TestEvent
+  dialogueStringVariables: []
+  dialogueIntVariables: []
+  dialogueFloatVariables: []
+  dialogueBoolVariables:
+  - TestBool
+  dialogueNodeFields:
+  - {fileID: 11400000, guid: cf86b120930f23949b836e4cdf5eae7e, type: 2}
+  - {fileID: 11400000, guid: c5d6a17d0fb4c434282db544d2f3fede, type: 2}
+  - {fileID: 11400000, guid: c3c4df1478ecee047af14b9345ebc2e8, type: 2}
+  choiceNodeFields:
+  - {fileID: 11400000, guid: cf86b120930f23949b836e4cdf5eae7e, type: 2}
+  - {fileID: 11400000, guid: c5d6a17d0fb4c434282db544d2f3fede, type: 2}
+  - {fileID: 11400000, guid: c3c4df1478ecee047af14b9345ebc2e8, type: 2}
+  choiceFields: []
+  ifNodeFields: []
+  eventNodeFields: []
+  endNodeFields: []
+  languages:
+  - English
+  language: 0
+  fieldSORegistry:
+  - {fileID: 11400000, guid: 01dbd0d776db5b94abd6d3d50655ee08, type: 2}
+  - {fileID: 11400000, guid: 30f1c85ff71747f46930f5d7cb042868, type: 2}
+  - {fileID: 11400000, guid: c5d6a17d0fb4c434282db544d2f3fede, type: 2}
+  - {fileID: 11400000, guid: d214023d311e0db4a91eb29256e5441d, type: 2}
+  - {fileID: 11400000, guid: cf86b120930f23949b836e4cdf5eae7e, type: 2}
+  - {fileID: 11400000, guid: c3c4df1478ecee047af14b9345ebc2e8, type: 2}

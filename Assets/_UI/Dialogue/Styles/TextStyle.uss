@@ -1,0 +1,170 @@
+:root {
+}
+
+AnimatedLabel {
+    color: rgb(255, 255, 255);
+    -unity-font-style: normal;
+    -unity-text-align: upper-left;
+    justify-content: flex-start;
+}
+
+Button {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 20px;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    flex-grow: 0;
+    align-self: stretch;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: auto;
+    justify-content: space-around;
+    font-size: 200%;
+    -unity-font-style: bold;
+    margin-top: 2%;
+    margin-right: 0;
+    margin-bottom: 2%;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    align-content: stretch;
+    flex-shrink: 1;
+}
+
+:active {
+    transition-property: opacity;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+}
+
+.DialogueContainerDEFAULT {
+    flex-grow: 1;
+    align-content: flex-start;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-self: auto;
+    flex-direction: row;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    opacity: 1;
+}
+
+.DialogueContainerFADED {
+    opacity: 0;
+}
+
+.DialogueCharacterDEFAULT {
+    width: auto;
+    flex-direction: column-reverse;
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: flex-end;
+    align-self: auto;
+    align-content: auto;
+    background-image: none;
+}
+
+.DialogueTextDEFAUL {
+    font-size: 15%;
+    -unity-font-style: normal;
+    -unity-font-definition: url("project://database/Assets/Plugins/Febucci/Text%20Animator%20for%20Unity/Samples/Quick%20Start/UIToolkit/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=ca7fbe2632213214eb37e0479523ac09&type=3#NotInter-Regular");
+    white-space: normal;
+    text-overflow: ellipsis;
+    -unity-text-align: upper-left;
+    -unity-text-auto-size: best-fit 1px 40px;
+    -unity-text-generator: advanced;
+}
+
+.DialogueSpeakerDEFAULT {
+    -unity-font-style: bold;
+    font-size: 5px;
+    -unity-text-auto-size: best-fit 2px 40px;
+}
+
+.ButtonContainerDEFAULT {
+    flex-grow: 1;
+    height: 0;
+    align-self: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    transition-duration: 0.5s;
+    opacity: 0;
+    transition-property: all;
+}
+
+.ButtonContainerFULL {
+    height: 30%;
+    opacity: 1;
+}
+
+.TextBubbleDEFAULT {
+    flex-grow: 0;
+    aspect-ratio: auto;
+    flex-wrap: nowrap;
+    height: auto;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: rgba(20, 18, 72, 0.84);
+    flex-direction: column;
+    align-self: auto;
+    align-content: flex-start;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    -unity-text-align: upper-left;
+    white-space: normal;
+    text-overflow: clip;
+    transform-origin: left;
+    transition-duration: 0.2s;
+    opacity: 1;
+    transition-timing-function: ease-in;
+}
+
+.TextBubbleFADEDTOP {
+    opacity: 0;
+    transform-origin: left;
+    rotate: 15deg;
+    translate: -25% 0;
+}
+
+.TextBubbleDARK {
+    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.84);
+}
+
+.TextBubbleFADEDBOT {
+    opacity: 0;
+    transform-origin: left;
+    rotate: -15deg;
+    translate: 25% 0;
+}
+
+

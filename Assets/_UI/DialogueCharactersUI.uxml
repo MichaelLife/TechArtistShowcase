@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/_UI/Dialogue/Styles/TextStyle.uss?fileID=7433441132597879392&amp;guid=6836363f9c3033d45a94573b04e1b34c&amp;type=3#TextStyle"/>
+    <Style src="project://database/Assets/_UI/Dialogue/Styles/CharacterStyles.uss?fileID=7433441132597879392&amp;guid=6e6ef4a9588008345a25e2db7f0f7ef8&amp;type=3#CharacterStyles"/>
+    <ui:VisualElement name="DialogueContainer" class="DialogueContainerDEFAULT">
+        <ui:Image source="project://database/Assets/_UI/Render%20Texture.renderTexture?fileID=8400000&amp;guid=ef95628e04152a840a4c6c732e2545ef&amp;type=2#Render Texture" name="RightImage" scale-mode="ScaleAndCrop" language-direction="Inherit" focusable="false" class="CharacterDEFAULT" style="transition-timing-function: ease-in-out-cubic; transform-origin: bottom;"/>
+        <ui:VisualElement style="flex-grow: 1; width: 10%;"/>
+        <ui:Image source="project://database/Assets/_UI/Render%20Texture.renderTexture?fileID=8400000&amp;guid=ef95628e04152a840a4c6c732e2545ef&amp;type=2#Render Texture" name="LeftImage" scale-mode="ScaleAndCrop" class="CharacterDEFAULT" style="width: auto; flex-direction: column-reverse; scale: -1 1;"/>
+    </ui:VisualElement>
+</ui:UXML>

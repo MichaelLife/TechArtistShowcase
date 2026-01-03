@@ -1,0 +1,32 @@
+:root {
+}
+
+.CharacterDEFAULT {
+    transition-duration: 0.75s;
+    transition-timing-function: ease-in-out-cubic;
+}
+
+.CharacterHIDDENLEFT {
+    transform-origin: left bottom;
+    translate: -25% 20%;
+    rotate: -10deg;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    opacity: 0;
+}
+
+.CharacterHIDDENRIGHT {
+    transform-origin: bottom;
+    translate: 25% 30%;
+    rotate: 10deg;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    opacity: 0;
+}
+
+.CharacterDARK {
+    transition-duration: 0.75s;
+    transition-timing-function: ease-in-out-cubic;
+    opacity: 0.5;
+    translate: 0% 10%;
+}
