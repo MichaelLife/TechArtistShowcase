@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57a6945b90dcd0c4b81619c0d8b5c283, type: 3}
-  m_Name: Typewriter By Character
+  m_Name: TypewriterText
   m_EditorClassIdentifier: Febucci.TextAnimatorForUnity.Runtime::Febucci.TextAnimatorForUnity.TypingDelaysByCharacter
   waitForNormalChars: 0.03
-  waitLong: 0.3
+  waitLong: 0.5
   waitMiddle: 0.2
   avoidMultiplePunctuationWait: 0
-  waitForNewLines: 1
+  waitForNewLines: 0
   waitForLastCharacter: 1
   useTypewriterWaitForDisappearances: 1
   disappearanceWaitTime: 0.015

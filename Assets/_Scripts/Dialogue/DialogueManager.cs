@@ -43,6 +43,7 @@ public class DialogueManager : DialogueUIManager
         }
         else
         {
+            dialogueUI.gameObject.SetActive(true);
             player.Immobilize(immobilizePlayer);
             this.currentDialogue = currentDialogue;
             StartDialogue();
@@ -51,7 +52,7 @@ public class DialogueManager : DialogueUIManager
 
     public void StartDialogue()
     {
-        dialogueUI.gameObject.SetActive(true);
+        dialogueUI.dialogueUIGroup.gameObject.SetActive(true);
         dialogueUI.StartDialogue();
         dialogueManager.StartDialogue(currentDialogue);
     }

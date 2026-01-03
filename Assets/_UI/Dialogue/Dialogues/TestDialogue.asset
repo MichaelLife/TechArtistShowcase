@@ -61,7 +61,9 @@ MonoBehaviour:
     - Key: c3c4df1478ecee047af14b9345ebc2e8
       Value: 0
   boolFields:
-    items: []
+    items:
+    - Key: c5d6a17d0fb4c434282db544d2f3fede
+      Value: 1
   vector2Fields:
     items: []
   vector3Fields:

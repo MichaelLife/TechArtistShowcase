@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Febucci.TextAnimatorForUnity;
 using System.Linq;
 using System.Collections;
 using System;
+using TMPro;
+using Febucci.TextAnimatorForUnity.TextMeshPro; 
+
 
 namespace LifeHMA.Dialogue
 {
@@ -16,6 +20,18 @@ namespace LifeHMA.Dialogue
     {
         Left,
         Right
+    }
+
+    [Serializable]
+    public class DialogueBubble
+    {
+        public UnityEngine.UI.Image background;
+        public TypewriterComponent speaker;
+        public TypewriterComponent text;
+
+        [HideInInspector]
+        public RectTransform backgroundRT;
+        public TextMeshProUGUI speakerRT, textRT;
     }
 
     public class DialogueUI : MonoBehaviour
@@ -32,7 +48,7 @@ namespace LifeHMA.Dialogue
         AnimatedLabel TopSpeakerLabel, TopTextLabel, BotSpeakerLabel, BotTextLabel;
 
         VisualElement TopBubble, BotBubble, ButtonContainer;
-        Image LeftCharacter, RightCharacter;
+        UnityEngine.UIElements.Image LeftCharacter, RightCharacter;
 
         private TextPosition currentBubble;
         private TextBubbleState topBubbleState, botBubbleState;
@@ -41,34 +57,28 @@ namespace LifeHMA.Dialogue
 
         public bool isWritingText;
 
-        private void OnEnable()
+        //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        public DialogueBubble topBubble, botBubble;
+        public float bubbleTransitionTime = 0.25f;
+        public GameObject buttonParent;
+        public GameObject dialogueBubblesParent;
+        public GameObject choiceButton;
+        public CanvasGroup dialogueUIGroup;
+
+        private void Start()
         {
-            root = GetComponent<UIDocument>().rootVisualElement;
-            charRoot = CharactersUI.rootVisualElement;
+            botBubble.speakerRT = botBubble.speaker.GetComponent<TextMeshProUGUI>();
+            botBubble.textRT = botBubble.text.GetComponent<TextMeshProUGUI>();
+            botBubble.backgroundRT = botBubble.background.GetComponent<RectTransform>();
 
-            TopSpeakerLabel = root.Q<AnimatedLabel>("TopSpeaker");
-            TopTextLabel = root.Q<AnimatedLabel>("TopText");
+            topBubble.speakerRT = topBubble.speaker.GetComponent<TextMeshProUGUI>();
+            topBubble.textRT = topBubble.text.GetComponent<TextMeshProUGUI>();
+            topBubble.backgroundRT = topBubble.background.GetComponent<RectTransform>();
 
-            BotSpeakerLabel = root.Q<AnimatedLabel>("BotSpeaker");
-            BotTextLabel = root.Q<AnimatedLabel>("BotText");
+            topBubble.text.onTypewriterStart.AddListener(() => WritingStart());
+            topBubble.text.onTextShowed.AddListener(() => WritingStop());
 
-            TopBubble = root.Q<VisualElement>("TopBubble");
-            BotBubble = root.Q<VisualElement>("BotBubble");
-
-            ButtonContainer = root.Q<VisualElement>("ButtonContainer");
-
-            LeftCharacter = charRoot.Q<Image>("RightImage");
-            RightCharacter = charRoot.Q<Image>("LeftImage");
-
-            ResetTextBubbles();
-            ResetCharacterUI();
-
-            TopTextLabel.Typewriter.OnTypewriterStart += WritingStart;
-            TopTextLabel.Typewriter.OnTextShowed += WritingStop;
-            BotTextLabel.Typewriter.OnTypewriterStart += WritingStart;
-            BotTextLabel.Typewriter.OnTextShowed += WritingStop;
-
-            root.Children().First().AddToClassList("DialogueContainerFADED");
+            gameObject.SetActive(false);
         }
 
         private void WritingStart() => isWritingText = true;
@@ -77,21 +87,30 @@ namespace LifeHMA.Dialogue
         public void SkipText()
         {
             isWritingText = false;
-            TopTextLabel.Typewriter.SkipTypewriter();
-            //BotTextLabel.Typewriter.SkipTypewriter();
+            topBubble.text.SkipTypewriter();
+            topBubble.speaker.SkipTypewriter();
+            botBubble.text.SkipTypewriter();
+            botBubble.speaker.SkipTypewriter();
         }
 
+        
         private void ResetTextBubbles()
         {
-            if (topBubbleState == TextBubbleState.Darken) LightTextBubble(TopBubble);
-            HideTextBubble(TopBubble, TextPosition.Top);
+            topBubble.text.TextAnimator.SetText(" ");
+            botBubble.text.TextAnimator.SetText(" ");
+            topBubble.speaker.TextAnimator.SetText(" ");
+            botBubble.speaker.TextAnimator.SetText(" ");
+
+            if (topBubbleState == TextBubbleState.Darken) ShowTextBubble(topBubble, 0);
+            HideTextBubble(topBubble, 0);
             topBubbleState = TextBubbleState.Hidden;
 
-            if (botBubbleState == TextBubbleState.Darken) LightTextBubble(BotBubble);
-            HideTextBubble(BotBubble, TextPosition.Bottom);
+            if (botBubbleState == TextBubbleState.Darken) ShowTextBubble(botBubble, 0);
+            HideTextBubble(botBubble, 0);
             botBubbleState = TextBubbleState.Hidden;
         }
 
+        /*
         private void ResetCharacterUI()
         {
             LightCharacter(LeftCharacter);
@@ -104,54 +123,73 @@ namespace LifeHMA.Dialogue
             RightSpeaker = "";
             currentSpeaker = "";
         }
-
+        */
         public void StartDialogue()
         {
-            root.Children().First().RemoveFromClassList("DialogueContainerFADED");
+            ResetTextBubbles();
+
+            ResizeTextBubble(botBubble, 0f);
+            ResizeTextBubble(topBubble, 0f);
+
+            LeanTween.alphaCanvas(dialogueUIGroup, 1.0f, 0.5f);
         }
 
         public void EndDialogue()
         {
-            root.Children().First().AddToClassList("DialogueContainerFADED");
-            ResetTextBubbles();
-            ResetCharacterUI(); 
+            ResizeTextBubble(botBubble, 0f);
+            ResizeTextBubble(topBubble, 0f);
+
+            LeanTween.alphaCanvas(dialogueUIGroup, 0.0f, 0.5f).setOnComplete(() => gameObject.SetActive(false));
         }
 
         public IEnumerator SetTextToUI(TextPosition pos, string speaker, string text, bool hideBubbles, WaitForSeconds wait = null)
         {
-            TopTextLabel.SetText(" ");
-            BotTextLabel.SetText(" ");
+            DialogueBubble _bubble;
 
-            yield return wait;
-
-            if (pos == TextPosition.Top)
+            if (pos == TextPosition.Bottom)
             {
-                currentBubble = TextPosition.Top;
-
-                topBubbleState = UpdateTextBubbleState(topBubbleState, currentBubble, TextPosition.Top, TopBubble, hideBubbles);
-                botBubbleState = UpdateTextBubbleState(botBubbleState, currentBubble, TextPosition.Bottom, BotBubble, hideBubbles);
-
-                TopSpeakerLabel.SetText(speaker);
-
-                yield return new WaitForSeconds(0.3f);
-                TopTextLabel.Typewriter.ShowText(text);
+                _bubble = botBubble;
+                currentBubble = TextPosition.Bottom;
             }
             else
             {
-                currentBubble = TextPosition.Bottom;
-
-                botBubbleState = UpdateTextBubbleState(botBubbleState, currentBubble, TextPosition.Bottom, BotBubble, hideBubbles);
-                topBubbleState = UpdateTextBubbleState(topBubbleState, currentBubble, TextPosition.Top, TopBubble, hideBubbles);
-
-                BotSpeakerLabel.SetText(speaker);
-
-                yield return new WaitForSeconds(0.3f);
-                BotTextLabel.Typewriter.ShowText(text);
+                _bubble = topBubble;
+                currentBubble = TextPosition.Top;
             }
+
+            yield return wait;
+
+            botBubbleState = UpdateTextBubbleState(botBubbleState, currentBubble, TextPosition.Bottom, botBubble, hideBubbles);
+            topBubbleState = UpdateTextBubbleState(topBubbleState, currentBubble, TextPosition.Top, topBubble, hideBubbles);
+
+            yield return new WaitForSeconds(0.3f);
+            _bubble.text.ShowText(" ");
+
+            if(speaker != _bubble.speaker.TextAnimator.textFull)
+                _bubble.speaker.ShowText(speaker);
+
+            _bubble.text.ShowText(text);
+
+            ResizeTextBubble(_bubble, bubbleTransitionTime);
+        }
+
+        private void ResizeTextBubble(DialogueBubble _bubble, float time)
+        {
+            int _lineCount = _bubble.textRT.textInfo.lineCount;
+            //Tamaño base de la burbuja + tamaño de cada línea * número de líneas
+            Vector2 _to = new Vector2(1000, 171.78f)
+                + (_lineCount * new Vector2(0, 41.4f));
+            
+            //Restarle el número de caracteres si es de solo una línea
+            if(_lineCount == 1) 
+            { _to -= (46 - Mathf.Max(_bubble.textRT.text.Length, _bubble.speakerRT.text.Length + 2)) * new Vector2(19.5f, 0); }
+
+            LeanTween.LeanRectTransformDeltaSize(_bubble.backgroundRT, _to, time);
         }
 
         public void UpdateCharactersUI(CharacterPosition charPos, string speaker, bool showSpeaker, bool listener)
         {
+            /*
             string updateSpeaker = RightSpeaker;
             Image updateCharacter = RightCharacter;
             if (charPos == CharacterPosition.Left) { updateSpeaker = LeftSpeaker; updateCharacter = LeftCharacter; }
@@ -199,44 +237,44 @@ namespace LifeHMA.Dialogue
                 if (charPos == CharacterPosition.Left) LeftSpeaker = "";
                 else RightSpeaker = "";
                 if (!listener) currentSpeaker = "";
-            }
+            }*/
         }
 
-        private TextBubbleState UpdateTextBubbleState(TextBubbleState _bubbleState, TextPosition _currentSpeaker, TextPosition me, VisualElement _bubble, bool hideBubbles)
+        private TextBubbleState UpdateTextBubbleState(TextBubbleState _bubbleState, TextPosition _currentSpeaker, TextPosition me, DialogueBubble _bubble, bool hideBubbles)
         {
             if (currentBubble == me) //Si el que está hablando soy yo 
             {
                 //Si estoy escondido me enseño
-                if (_bubbleState == TextBubbleState.Hidden) ShowTextBubble(_bubble, me);
+                if (_bubbleState == TextBubbleState.Hidden) ShowTextBubble(_bubble, bubbleTransitionTime);
 
                 //Si estoy oscurecido me aclaro
-                if (_bubbleState == TextBubbleState.Darken) LightTextBubble(_bubble);
+                if (_bubbleState == TextBubbleState.Darken) ShowTextBubble(_bubble, bubbleTransitionTime);
 
                 _bubbleState = TextBubbleState.Shown;
             }
             else //Si no estoy hablando yo
             {
                 //ver si tengo que esconderme o oscurecerme
-                if(hideBubbles)
+                if (hideBubbles)
                 {
                     //Si no estoy escondido ya
                     if (_bubbleState != TextBubbleState.Hidden)
                     {
                         //Si estoy oscurecido me aclaro
-                        if (_bubbleState == TextBubbleState.Darken) LightTextBubble(_bubble);
+                        if (_bubbleState == TextBubbleState.Darken) ShowTextBubble(_bubble, bubbleTransitionTime);
 
                         //Me escondo
-                        HideTextBubble(_bubble, me);
+                        HideTextBubble(_bubble, bubbleTransitionTime);
                         _bubbleState = TextBubbleState.Hidden;
                     }
                 }
                 else
                 {
                     //Si estoy escondido me enseño
-                    if (_bubbleState == TextBubbleState.Hidden) ShowTextBubble(_bubble, me);
+                    if (_bubbleState == TextBubbleState.Hidden) ShowTextBubble(_bubble, bubbleTransitionTime);
 
                     //Me oscurezco
-                    DarkenTextBubble(_bubble);
+                    DarkenTextBubble(_bubble, bubbleTransitionTime);
                     _bubbleState = TextBubbleState.Darken;
                 }
             }
@@ -246,23 +284,20 @@ namespace LifeHMA.Dialogue
 
         public void AddButton(DialogueManager manager, int i, string optionString)
         {
-            var button = new Button(() =>
-            {
-                int index = i;
-                manager.OnChoiceClick(i);
-            })
-            {
-                text = optionString
-            };
+            var _g = (GameObject)Instantiate(choiceButton, buttonParent.transform);
+            var _button = _g.GetComponent<UnityEngine.UI.Button>();
 
-            ButtonContainer.Add(button);
+            _button.onClick.AddListener(() => manager.OnChoiceClick(i));
+            TextAnimator_TMP _text = _g.GetComponentInChildren<TextAnimator_TMP>();
+            _text.SetText(optionString);
         }
 
-        private void RemoveButtons() => ButtonContainer.Clear();
-        public void StartAnimationButtons() => ButtonContainer.AddToClassList("ButtonContainerFULL");
-        public void EndAnimationButtons() { ButtonContainer.RemoveFromClassList("ButtonContainerFULL"); Invoke("RemoveButtons", 0.75f); }
+        private void RemoveButtons() { foreach (Transform child in buttonParent.transform) { Destroy(child.gameObject); } }
+        public void StartAnimationButtons() => LeanTween.moveLocalY(dialogueBubblesParent, 125.0f, 0.5f);
+        public void EndAnimationButtons() { LeanTween.moveLocalY(dialogueBubblesParent, 0f, 0.75f); Invoke("RemoveButtons", 0.75f); }
 
         //TEXT BUBBLE ANIMATIONS
+        /*
         private void ShowTextBubble(VisualElement bubble, TextPosition pos)
         {
             string name = "TextBubbleFADEDTOP";
@@ -278,8 +313,28 @@ namespace LifeHMA.Dialogue
 
         private void DarkenTextBubble(VisualElement bubble) => bubble.AddToClassList("TextBubbleDARK");
         private void LightTextBubble(VisualElement bubble) => bubble.RemoveFromClassList("TextBubbleDARK");
+        */
+        private void ShowTextBubble(DialogueBubble _bubble, float time)
+        {
+            LeanTween.alpha(_bubble.backgroundRT, 1.0f, time);
+            LeanTween.LeanTMPAlpha(_bubble.speakerRT, 1.0f, time);
+            LeanTween.LeanTMPAlpha(_bubble.textRT, 1.0f, time);
+        }
+        private void HideTextBubble(DialogueBubble _bubble, float time)
+        {
+            LeanTween.alpha(_bubble.backgroundRT, 0.0f, time);
+            LeanTween.LeanTMPAlpha(_bubble.speakerRT, 0.0f, time);
+            LeanTween.LeanTMPAlpha(_bubble.textRT, 0.0f, time);
+        }
+        private void DarkenTextBubble(DialogueBubble _bubble, float time)
+        {
+            LeanTween.alpha(_bubble.backgroundRT, 0.5f, time);
+            LeanTween.LeanTMPAlpha(_bubble.speakerRT, 0.5f, time);
+            LeanTween.LeanTMPAlpha(_bubble.textRT, 0.5f, time);
+        }
 
         //CHARACTER ANIMATIONS
+        /*
         private void ShowCharacter(Image _character, CharacterPosition pos)
         {
             string name = "CharacterHIDDENRIGHT";
@@ -300,6 +355,6 @@ namespace LifeHMA.Dialogue
             HideCharacter(_character, pos);
             yield return new WaitForSeconds(0.6f);
             ShowCharacter(_character, pos);
-        }
+        }*/
     }
 }
