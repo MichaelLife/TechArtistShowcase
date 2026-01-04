@@ -145,6 +145,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UI;
 
 public enum TweenAction{
     MOVE_X,
@@ -1155,6 +1156,14 @@ public class LeanTween : MonoBehaviour {
     {
         Vector2 _from = obj.position;
         return LeanTween.value(obj.gameObject, _from, to, time).setOnUpdate((Vector2 co) => obj.position = co);
+    }
+
+    public static LTDescr AlphaRawImage(RawImage obj, float to, float time)
+    {
+        var color = obj.color;
+        var fadeoutcolor = color;
+        fadeoutcolor.a = to;
+        return LeanTween.value(obj.gameObject, color, fadeoutcolor, time).setOnUpdate((Color co) => obj.color = co);
     }
 
     /**
